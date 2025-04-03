@@ -1,0 +1,6 @@
+stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station
+43968810_S,R. São Cristóvão 2 - Sussuarana Salvador - BA 41213-430 Brasil,-12.931565284729,-38.444393157959,1,
+43968810,R. São Cristóvão 2 - Sussuarana Salvador - BA 41213-430 Brasil,-12.931565284729,-38.444393157959,0,43968810_S
+47566106_S,Av. Ulysses Guimarães 4067 - Sussuarana Salvador - BA 41213-000 Brasil,-12.93385887146,-38.4467735290527,1,
+47566106,Av. Ulysses Guimarães 4067 - Sussuarana Salvador - BA 41213-000 Brasil,-12.93385887146,-38.4467735290527,0,47566106_S
+44782337,Av. Ulysses Guimarães 4314-4322 - Novo Horizonte Salvador - BA 41218-700 Brasil,-12.9351501464844,-38.4405784606934,0,

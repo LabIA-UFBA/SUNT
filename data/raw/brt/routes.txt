@@ -1,0 +1,5 @@
+route_id,route_short_name,route_long_name,route_type
+"9","B001","B001- (IDA)  EST. RODOVIÁRIA x EST. PITUBA ","3"
+"10","B001","-","3"
+"13","B002","(IDA)","3"
+"14","B002","(VOLTA)","3"
