@@ -20,10 +20,14 @@ On the behalf of all of the authors, we appreciate your interest in our data, co
 
 The organization of this repository is:
 
-> - **data** - raw and graph-based data
-> - **data_design** - contains source codes developed to create our datasets and train learning models 
-> - **models** - contains frozen models used to predict different tasks using SUNT
+> - **data** : raw and graph-based data
+> - **data_design** : contains source codes developed to create our datasets and train learning models 
+> - **docs**: database documentation
+> - **images**: plots with statistics of the dataset attributes
+> - **integration**: example of integrating other databases with the dataset
+> - **models** : contains frozen models used to predict different tasks using SUNT
 > - **outputs**/: weigths and results
+> - **stats**: notebook with data statistics.
 ---
 
 
