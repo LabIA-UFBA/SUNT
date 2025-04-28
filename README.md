@@ -1,6 +1,6 @@
 # SUNT - Salvador Urban Network Transportation
 
-## Overview
+## 🗺️ Overview
 
 First and foremost, thanks for your interest in using our dataset, referred to as Salvador Urban Network Transportation (SUNT), and benchmarks.
 
@@ -10,13 +10,13 @@ More details about our data, codes, and models are shown in each folder.
 
 The following figure illustrates our dataset is geographically distributed in Salvador (Brazil).
 
-<center><img src="graphs-SSA.png" width=500px/></center>
+<center><img src="images/graphs-SSA.png" width=500px/></center>
 
 On the behalf of all of the authors, we appreciate your interest in our data, code, and models, and hope they are useful to your research.
 
 ---
 
-### Repository structure
+## 🗂️ Repository structure
 
 The organization of this repository is:
 
@@ -31,9 +31,9 @@ The organization of this repository is:
 ---
 
 
-## Data
+## :floppy_disk: Dataset
 
-### The full dataset is stored on the [SUNT huggingface](https://huggingface.co/datasets/suntdataset/sunt).
+### The full dataset is stored on the [Mendelay Data](https://data.mendeley.com/datasets/85fdtx3kr5/1).
 
  - **RAW**
    - AVL (Automatic Vehicle Location)
@@ -44,118 +44,25 @@ The organization of this repository is:
   - Boarding
   - Alighting
   - Origin-Destination (OD)
-  - Graph-based Dataset
-    - Node Features
-    - Edge Features
+
+##  📝 Citation
+
+If you find the dataset useful for your research, please consider citing:
 
 
----
 
-## Benchmarks
-
-### Requirements
-
-To install requirements:
-
-```
-pip install -r requirements.txt
-```
-
-### Node Regression
-
-All code in `models/node-regression/main.py`
-
-**Load data**: Enter in dir `models/node-regression/` :
-
-```python
-# train data - node features (split with PyTorch Geometric Temporal)
-train_dataset = load_dataset('../../data/graph_designer/train_test/dataset_train.pkl')
-# test data - node features (split with PyTorch Geometric Temporal)
-test_dataset = load_dataset('../../data/graph_designer/train_test/dataset_test.pkl')
-# selected test nodes
-df_nodes = pd.read_csv('../../data/graph_designer/train_test/df_nodes_selected.csv')
-nodes = list(df_nodes.tensor_idx.values)
-df_nodes_loader = pd.read_csv('../../data/graph_designer/train_test/df_nodes_selected_loader.csv')
-df_nodes_loader['time'] = pd.to_datetime(df_nodes_loader['time'], format='%Y-%m-%d %H:%M:%S')
+```latex
+@dataset{SUNT2025,
+  author       = {Marcos Vinícius dos Santos Ferreira and Matheus Carvalho de Souza and Tatiane Nogueira Rios and Islame Felipe da Costa Fernandes and Danilo Oliveira Andrade and Joao Gama and Albert Bifet and Ricardo Rios},
+  title        = {Salvador Urban Network Transportation (SUNT)},
+  year         = {2025},
+  publisher    = {Mendeley Data},
+  version      = {1},
+  doi          = {10.17632/85fdtx3kr5.1},
+  url          = {https://data.mendeley.com/datasets/85fdtx3kr5/1}
+}
 ```
 
-**Train and test**:
+## 📃 License
 
-```python
-device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
-hidden_layer = 128
-mn = 'gcn'
-epcs=500
-# instance model
-model =  mm.GCN(in_channels=36,
-                hidden_channels=hidden_layer,
-                out_channels=12).to(device)
-
-# run train and test model
-run_model(model, train_dataset, test_dataset, df_nodes, nodes, df_nodes_loader, mn, epcs, device=device)
-```
-
----
-
-### Node classification
-
-All code in `models/node-classification/main.py`
-
-**Load data**: Enter in dir `models/node-classification/` :
-
-```python
-# load train and test by fold
-data = torch.load(f'../../data/graph_designer/train_test_node_classification_days/data_{fold_idx}.pt')
-```
-
-**Train and Test**
-
-```python
-# ser parameters
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-input_layer  = data.num_features
-hidden_layer = 64
-out_layer    = 1#data.y.shape[1]
-mn = f'gcn{sufix}'
-epcs=100
-
-# instance a model
-model =  mm.GCN(in_channels=input_layer,
-                                  hidden_channels=hidden_layer,
-                                  out_channels=out_layer).to(device)
-# train and test
-run_model(model, data, mn, epcs, device=device)
-```
-
----
-
-### Edge classification
-
-
-All code in `models/edge-classification/main.py`
-
-**Load data**: Enter in dir `models/edge-classification/` :
-
-```python
-# load train and test by fold
-train_dataset = torch.load(f'../../data/graph_designer/train_test_edge_classification_days/train_data_{fold_idx}.pt')
-        test_dataset  = torch.load(f'../../data/graph_designer/train_test_edge_classification_days/test_data_{fold_idx}.pt')
-```
-
-**Train and Test**
-
-```python
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-input_layer  = train_dataset.num_features
-hidden_layer = 64
-out_layer    = train_dataset.edge_label.shape[1]
-mn = f'gcn{sufix}'
-epcs=50
-    
-# instance a model
-model =  mm.GCNEdgeClassifier(in_channels=input_layer,
-                                  hidden_channels=hidden_layer,
-                                  out_channels=out_layer).to(device)
-# traind and test
-run_model(model, train_dataset, test_dataset, mn, epcs, device=device)
-```
+This project is licensed under the CC BY 4.0 License.
