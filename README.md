@@ -45,6 +45,10 @@ The organization of this repository is:
   - Alighting
   - Origin-Destination (OD)
 
+
+
+More dataset info, see  [dataset doc](docs/datasets.md). 
+
 ##  📝 Citation
 
 If you find the dataset useful for your research, please consider citing:
