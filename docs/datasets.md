@@ -248,7 +248,7 @@ Features estimated full trips by passengers, enabling analysis of bus loading at
 
 | route_short_name | register_code | direction_id | pt_sequence | stop_id   | vehicle | trip_number | trip_id           | start_trip          | end_trip            | stop_time           | n-boardings | n-alighting | lag_loading | balance | loading |
 |------------------|---------------|--------------|-------------|-----------|---------|-------------|-------------------|---------------------|---------------------|---------------------|-------------|-------------|-------------|---------|---------|
-| 1521             | 55037         | I            | 1           | 46021891  | 30661   | 1           | 30661_1521_1266   | 2024-03-01 06:59:11 | 2024-03-01 07:15:22 | 2024-03-01 06:59:11 | 42.0        | 0.0         | 0           | 0       | 42      |
+| 1521             | 55037         | I            | 1           | 46021891  | 30661   | 1           | 30661_1521_1266   | 2024-03-01 06:59:11 | 2024-03-01 07:15:22 | 2024-03-01 06:59:11 | 42.0        | 0.0         | 0           | 0       | 42,00      |
 
 - `route_short_name`: (str) Bus line identifier.
 - `register_code`: (int) Service registration code.
@@ -265,7 +265,7 @@ Features estimated full trips by passengers, enabling analysis of bus loading at
 - `n-alighting`: (float) Number of alightings at the stop.
 - `lag_loading`: (int) Loading from the previous stop.
 - `balance`: (int) Net change in passenger count.
-- `loading`: (int) Total passengers on board after the stop.
+- `loading`: (double) Total passengers on board after the stop.
 
 ## Graph-based Dataset
 
