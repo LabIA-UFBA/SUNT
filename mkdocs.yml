@@ -1,0 +1,98 @@
+site_name: SUNT - Salvador Urban Network Transportation
+site_description: >
+  A landmark spatiotemporal dataset for public transportation in Salvador, Brazil.
+site_url: https://sunt.readthedocs.io
+repo_url: https://github.com/LabIA-UFBA/SUNT
+repo_name: LabIA-UFBA/SUNT
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - table-reader
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+
+  - Dataset:
+    - Overview: dataset/overview.md
+    - Raw Data:
+      - AVL: dataset/raw/avl.md
+      - AFC: dataset/raw/afc.md
+      - GTFS: dataset/raw/gtfs.md
+      - LTI: dataset/raw/lti.md
+    - Processed Data:
+      - Boarding: dataset/processed/boarding.md
+      - Alighting: dataset/processed/alighting.md
+      - Origin-Destination (OD): dataset/processed/od.md
+    - Graph:
+      - Overview: dataset/graph/overview.md
+      - Node Features: dataset/graph/nodes.md
+      - Edge Features: dataset/graph/edges.md
+
+  - Methodology:
+    - Data Collection: methodology/data-collection.md
+    - Trip Chaining: methodology/trip-chaining.md
+
+  - Tutorials:
+    - Loading Data: tutorials/loading-data.md
+    - Working with the Graph: tutorials/graph-usage.md
+    - Integrating Datasets: tutorials/integration.md
+
+  - Data Dictionary: data-dictionary.md
+  - Changelog: changelog.md
+  - Citation: citation.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/LabIA-UFBA/SUNT
+    - icon: fontawesome/brands/python
+      link: https://huggingface.co/datasets/labiaufba/PublicTransportationSunt
+
+copyright: >
+  Copyright &copy; 2025 LabIA - UFBA &nbsp;|&nbsp;
+  Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
