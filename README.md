@@ -55,7 +55,7 @@ More dataset info, see  [dataset doc](docs/datasets.md).
 
 If you find the dataset useful for your research, please consider citing:
 
-```latex
+```bibtex
 @dataset{SUNT2025,
   author       = {Marcos Vinícius dos Santos Ferreira and Matheus Carvalho de Souza and Tatiane Nogueira Rios and Islame Felipe da Costa Fernandes and Danilo Oliveira Andrade and Joao Gama and Albert Bifet and Ricardo Rios},
   title        = {Salvador Urban Network Transportation (SUNT)},
@@ -69,7 +69,7 @@ If you find the dataset useful for your research, please consider citing:
 
 ### Paper
 
-```latex
+```bibtex
 @article{Ferreira2025,
   author    = {Ferreira, Marcos V. and Souza, Matheus and Rios, Tatiane N. and 
                Fernandes, Islame F. C. and Nery, Jorge and Gama, Jo{\~a}o and 
