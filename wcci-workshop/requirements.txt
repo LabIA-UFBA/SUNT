@@ -1,0 +1,28 @@
+# Core data
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
+datasets>=2.16           # HuggingFace datasets (primary loader)
+suntdataset              # Optional: official PyPI wrapper
+
+# Statistics / Classical ML
+statsmodels>=0.14
+scipy>=1.11
+scikit-learn>=1.3
+pmdarima>=2.0            # auto_arima for SARIMA parameter search
+
+# Deep Learning
+torch>=2.1
+torch-geometric>=2.4     # Graph Neural Networks (PyG)
+chronos-forecasting      # Amazon Chronos foundation model (zero-shot forecasting, Python 3.12+)
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.18
+folium>=0.15
+networkx>=3.2
+
+# Utilities
+tqdm>=4.66
+
