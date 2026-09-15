@@ -49,23 +49,18 @@ The organization of this repository is:
 
 More dataset info, see  [dataset doc](docs/datasets.md). 
 
+## 🚀 Practical Examples and Tutorial
+
+To help users get started with SUNT, we provide practical and easy-to-run examples for data visualization and passenger-demand forecasting:
+
+- **[SUNT Examples](https://github.com/ricardoarios/sunt_examples):** Python scripts covering time-series and graph visualization, as well as forecasting with SARIMA, LSTM, GRU, Transformers, Chronos, GCN, T-GCN, and T-GAT.
+- **[WCCI/IJCNN 2026 Tutorial — From Stops to Graphs](https://labia-ufba.github.io/wcci-ijcnn-sunt-gnn/):** tutorial materials combining theory and hands-on examples for modeling public transportation data with time-series models and Graph Neural Networks.
+
+The examples include instructions for installing the required dependencies, downloading the data, running the experiments, and reproducing the generated outputs.
+
+https://github.com/ricardoarios/sunt_examples
+
 ##  📝 Citation
-
-### Dataset repo
-
-If you find the dataset useful for your research, please consider citing:
-
-```bibtex
-@dataset{SUNT2025,
-  author       = {Marcos Vinícius dos Santos Ferreira and Matheus Carvalho de Souza and Tatiane Nogueira Rios and Islame Felipe da Costa Fernandes and Danilo Oliveira Andrade and Joao Gama and Albert Bifet and Ricardo Rios},
-  title        = {Salvador Urban Network Transportation (SUNT)},
-  year         = {2025},
-  publisher    = {Mendeley Data},
-  version      = {1},
-  doi          = {10.17632/85fdtx3kr5.1},
-  url          = {https://data.mendeley.com/datasets/85fdtx3kr5/1}
-}
-```
 
 ### Paper
 
@@ -83,6 +78,21 @@ If you find the dataset useful for your research, please consider citing:
   doi       = {10.1038/s41597-025-05674-6},
   url       = {https://doi.org/10.1038/s41597-025-05674-6},
   issn      = {2052-4463},
+}
+```
+### Dataset repo
+
+If you find the dataset useful for your research, please consider citing:
+
+```bibtex
+@dataset{SUNT2025,
+  author       = {Marcos Vinícius dos Santos Ferreira and Matheus Carvalho de Souza and Tatiane Nogueira Rios and Islame Felipe da Costa Fernandes and Danilo Oliveira Andrade and Joao Gama and Albert Bifet and Ricardo Rios},
+  title        = {Salvador Urban Network Transportation (SUNT)},
+  year         = {2025},
+  publisher    = {Mendeley Data},
+  version      = {1},
+  doi          = {10.17632/85fdtx3kr5.1},
+  url          = {https://data.mendeley.com/datasets/85fdtx3kr5/1}
 }
 ```
 
