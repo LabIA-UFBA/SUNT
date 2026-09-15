@@ -58,8 +58,6 @@ To help users get started with SUNT, we provide practical and easy-to-run exampl
 
 The examples include instructions for installing the required dependencies, downloading the data, running the experiments, and reproducing the generated outputs.
 
-https://github.com/ricardoarios/sunt_examples
-
 ##  📝 Citation
 
 ```bibtex
